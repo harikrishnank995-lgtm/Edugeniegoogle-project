@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EduGenie — Learning Assistant</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script defer src="/static/app.js"></script>
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar"><div class="brand-mark">E</div><div><p class="eyebrow">YOUR AI STUDY PARTNER</p><h1>EduGenie</h1></div><span class="pill">Gemini powered</span></header>
+    <section class="intro"><p class="eyebrow">LEARN SMARTER</p><h2>What would you like to learn today?</h2><p>Ask questions, understand tricky topics, practise with quizzes, or plan your learning.</p></section>
+    <section class="workspace">
+      <div class="task-grid" role="group" aria-label="Choose a learning task">
+        <button class="task active" data-task="qa"><span>✦</span><strong>Ask a question</strong><small>Get a clear answer</small></button>
+        <button class="task" data-task="explain"><span>◈</span><strong>Explain a topic</strong><small>Learn step by step</small></button>
+        <button class="task" data-task="quiz"><span>✓</span><strong>Create a quiz</strong><small>Test your knowledge</small></button>
+        <button class="task" data-task="summarize"><span>≡</span><strong>Summarize notes</strong><small>Find the key points</small></button>
+        <button class="task" data-task="learn"><span>↗</span><strong>Learning path</strong><small>Plan your next steps</small></button>
+      </div>
+      <form id="study-form">
+        <label id="input-label" for="study-input">Your question</label>
+        <textarea id="study-input" minlength="1" maxlength="20000" required placeholder="For example: Explain photosynthesis in simple words..."></textarea>
+        <div class="form-bottom"><span id="char-count">0 / 20000</span><button class="primary" id="submit-btn" type="submit">Generate answer <span>→</span></button></div>
+      </form>
+    </section>
+    <section id="result-card" class="result-card" hidden aria-live="polite"><div class="result-heading"><div><p class="eyebrow">YOUR STUDY RESULT</p><h2 id="result-title">Answer</h2></div><button id="copy-btn" class="secondary" type="button">Copy result</button></div><div id="result-content" class="result-content"></div></section>
+    <footer>Study at your own pace. Always verify important information with your course materials.</footer>
+  </main>
+</body>
+</html>
